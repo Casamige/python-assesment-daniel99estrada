@@ -1,0 +1,28 @@
+print ("welcome you want to create a acount ??? put your information below")
+print(" ")
+correctName = input ("enter your username :")
+print ("")
+correctPassword = input ("enter your password :")
+print (" ")
+print ("your acount is created")
+print (" ")
+
+
+trys = 3
+def wrong():
+  print("Your username or password is incorrect trys left: " + str(trys))
+
+while trys > 0 :
+   name = input("Enter your username: ")
+   print (" ")
+   password = input("Enter your password: ")
+   if name == correctName and password == correctPassword:
+    print ("Welcome " + name )
+    print ("you have successfully logged in")
+    break
+   else:
+    trys -= 1
+    print("")
+    wrong()
+    if trys == 0:
+      print ("You have been locked out")
